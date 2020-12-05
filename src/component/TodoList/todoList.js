@@ -9,7 +9,7 @@ const TodoList = (props) => {
   const [searchValue, setSearchValue] = useState('')
   const [checkArr, setCheckArr] = useState([])
 
-  
+
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('DataTasks'))) {
       setDataTasks(JSON.parse(localStorage.getItem('DataTasks')))
@@ -26,7 +26,8 @@ const TodoList = (props) => {
 
   const onClickChoose = (id, state) => {
     if(state){
-      setCheckArr(prev => prev.concat(id))
+      console.log('check ', checkArr.find(x => x === id))
+        setCheckArr(prev => prev.concat(id))
     }
     else{
       setCheckArr(prev => prev.filter(x => x != id))
@@ -34,7 +35,9 @@ const TodoList = (props) => {
   }
   const onClickRemoveAll = () => {
     checkArr.map(id =>{
+      console.log('id ', id)
       setDataTasks(prev => prev.filter(x => id != x.id ))
+      console.log('data', dataTasks)
     })
   }
   console.log('checkArr', checkArr)
@@ -51,7 +54,6 @@ const TodoList = (props) => {
       }
     });
   }
-  
   return (
     <div className="container-list">
       <div className="content-list">
@@ -60,7 +62,7 @@ const TodoList = (props) => {
             <input type="text" placeholder="Search ..." id="search"/>
         </div>
         <div className="list">
-          {dataTasks && searchData.length > 0 && searchValue != ''  ? searchData.map (task =><ItemList task={task} onClickRemove={onClickRemove}/>) : 
+          {searchData.length > 0 && searchValue != ''  ? searchData.map (task =><ItemList task={task} onClickRemove={onClickRemove}/>) : 
           dataTasks.map (task =><ItemList task={task} 
                                           onClickRemove={onClickRemove} 
                                           onClickChoose={onClickChoose}/>)
