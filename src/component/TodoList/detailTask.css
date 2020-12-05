@@ -1,0 +1,30 @@
+.content-detail{
+    padding: 25px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin-bottom: 90px;
+}
+.hideDetail{
+    display: none;
+}
+.title-task{
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+.btn-update{
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+    background-color: #5CB85C;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-update:focus{
+    outline: none;
+}

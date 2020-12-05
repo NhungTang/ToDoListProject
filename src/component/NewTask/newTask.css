@@ -1,0 +1,118 @@
+.content-new-task{
+    flex: 40%;
+    padding-right: 35px;
+    border-right: 1px solid #000000;
+}
+.add-input{
+    margin-top: 50px;
+}
+.title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.add-input input {
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+.discription{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.title-label {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 6px;
+}
+.discription textarea {
+    font-size: 12px;
+    text-align: left;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    height: 125px;
+}
+.date-piority{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.date {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+}
+.piority {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+}
+.react-datepicker__input-container input{
+    padding: 10px !important;
+    border: 1px solid #000000 !important;
+    
+}
+.text-choose{
+    font-size: 12px;
+    padding: 10.5px 10px;
+    border: 1px solid #000000;
+    margin: 0;
+}
+.piority-icon:hover .content-piority{
+    opacity: 1;
+}
+.list-piority {
+    position: absolute;
+    
+    width: 200px;
+}
+
+.content-piority{
+    opacity: 0;
+}
+.list-piority ul{
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(25,25,25,0.3);
+    background: white;
+    margin: 0;
+}
+.item-piority {
+    padding: 7px;
+    border-bottom: 1px solid #e7e7e9;
+}
+.btn-add{
+    margin: 50px 0;
+    text-align: center;
+    width: 100%;
+    background-color: #5CB85C;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.text-btn{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-add:hover{
+    background-color: #53A453;
+}
+.btn-add:focus{
+    outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-new-task{
+        flex: 100%;
+        padding-right: 0;
+        border-right: none;
+    }
+}

@@ -1,0 +1,56 @@
+.container-item{
+    margin-top: 20px;
+}
+.content-item{
+    border: 1px solid #000000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.left-content{
+    display: flex;
+}
+.check-box{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+.check{
+    position: relative;
+    cursor: pointer;
+}
+.icon-tick{
+    position: absolute;
+    width: 20px;
+    top: -3px;
+}
+.hide-tick{
+    display: none;
+}
+.name-task{
+    margin-left: 15px;
+    color: #333333;
+    font-size: 16px;
+}
+.btn-detail, .btn-remove{
+    border: none;
+    padding: 6px 23px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.btn-detail, .btn-remove:focus{
+    outline: none;
+}
+.btn-detail{
+    background: #00BCD4;
+}
+.btn-remove{
+    background: #D9534F;
+}
+.text-btn{
+    font-size: 12px;
+}

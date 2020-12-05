@@ -1,0 +1,89 @@
+.date-piority{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.date {
+    display: flex;
+    flex-direction: column;
+    flex: 60%;
+}
+.piority {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+}
+.react-datepicker__input-container input{
+    padding: 10px 0 10px 10px!important;
+    border: 1px solid #000000 !important;
+    
+}
+.react-datepicker__input-container input:focus{
+    outline: none;
+}
+.text-choose{
+    font-size: 12px;
+    padding: 10px 10px;
+    border: 1px solid #000000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.piority-icon:hover .content-piority{
+    opacity: 1;
+}
+.list-piority {
+    position: absolute;
+    width: 196px;
+}
+
+.content-piority{
+    opacity: 0;
+}
+.list-piority ul{
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(25,25,25,0.3);
+    background: white;
+    margin: 0;
+}
+.item-piority {
+    padding: 7px;
+    border-bottom: 1px solid #e7e7e9;
+    cursor: pointer;
+}
+.item-piority:hover {
+    background: #e7e7e9;
+}
+.choose{
+
+}
+.icon-piority img {
+    width: 12px;
+}
+.date-icon{
+    display: flex;
+}
+.icon-calendar{
+    width: 22px;
+    color: #444444;
+    padding: 0 8px;
+    margin-top: 5px;
+}
+.box-icon{
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-top: 1px solid;
+}
+
+@media only screen and (max-width: 768px) {
+    .date-piority{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
