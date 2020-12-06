@@ -8,7 +8,7 @@ const TodoList = (props) => {
   const [searchData, setSearchData] = useState([])
   const [searchValue, setSearchValue] = useState('')
   const [checkArr, setCheckArr] = useState([])
-
+  const [removed, setRemoved] = useState(false)
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('DataTasks'))) {
@@ -26,8 +26,7 @@ const TodoList = (props) => {
 
   const onClickChoose = (id, state) => {
     if(state){
-      console.log('check ', checkArr.find(x => x === id))
-        setCheckArr(prev => prev.concat(id))
+      setCheckArr(prev => prev.concat(id))
     }
     else{
       setCheckArr(prev => prev.filter(x => x != id))
@@ -35,13 +34,19 @@ const TodoList = (props) => {
   }
   const onClickRemoveAll = () => {
     checkArr.map(id =>{
-      console.log('id ', id)
       setDataTasks(prev => prev.filter(x => id != x.id ))
-      console.log('data', dataTasks)
+      setCheckArr(prev => prev.filter(x => x != id))
     })
+    
   }
-  console.log('checkArr', checkArr)
+  const sortData = (a, b) => {
+    const dateFirst = a.id
+    const dateSecond = b.id
+    return dateSecond - dateSecond
+
+  }
   const node = document.getElementById("search");
+
   if(node){
     node.addEventListener("keyup", function(event) {
       if (event.key === "Enter" && this.value != '') {
@@ -54,6 +59,7 @@ const TodoList = (props) => {
       }
     });
   }
+  
   return (
     <div className="container-list">
       <div className="content-list">

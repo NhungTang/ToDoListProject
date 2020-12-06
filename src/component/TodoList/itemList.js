@@ -15,6 +15,7 @@ const ItemList = (props) => {
         isShowDetail ? setShowDetail(false) : setShowDetail(true)
     }
     const onClickCheck = () => {
+        
         if(isCheck ){
             setCheck(false)
             props.onClickChoose(props.task.id, false)

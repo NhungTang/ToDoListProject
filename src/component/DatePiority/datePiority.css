@@ -14,7 +14,7 @@
     flex: 50%;
 }
 .react-datepicker__input-container input{
-    padding: 10px 0 10px 10px!important;
+    padding: 10px 15px!important;
     border: 1px solid #000000 !important;
     
 }
@@ -67,17 +67,19 @@
 }
 .date-icon{
     display: flex;
+    width: fit-content;
+    position: relative;
 }
 .icon-calendar{
     width: 22px;
     color: #444444;
-    padding: 0 8px;
-    margin-top: 5px;
+    padding: 2px 8px;
+    margin-top: 6px;
 }
 .box-icon{
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-    border-top: 1px solid;
+    border-left: 1px solid;
+    position: absolute;
+    right: 0;
 }
 
 @media only screen and (max-width: 768px) {

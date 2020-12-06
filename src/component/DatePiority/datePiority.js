@@ -15,8 +15,6 @@ const DatePiority = (props) => {
     }
     if(props.isDetail && props.task.date){
         const date = new Date(props.task.date)
-        // setStartDate(date)
-        // console.log(new Date(props.task.date))
     }
     
     const onClickPiority = (event) =>{
